@@ -1,0 +1,49 @@
+<!-- 
+Aluno: Paulo Cesar Leite - RA: 2706512 - ADS turma N12
+Projeto 2 - Disciplina Web Front-End - Professora Juliana Ferri
+arquivo HTML - fica somente o que não vai alterar na execução da aplicação
+os objetos, strings, informações manipuláveis estão no arquivo JS
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Bem Vindo ao Projeto 2 da disciplina de Front End</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho com título dinâmico (alterado via JavaScript) -->
+    <header>
+        <h1 id="titulo">Carregando...</h1>
+    </header>
+    <main>
+        <!-- Área dos botões para acessar as aplicações -->
+        <div class="botoes">
+            <!-- Cada botão chama uma função JS simples ao ser clicado -->
+            <button onclick="calcularMedia()">Jogo da Média</button>
+            <button onclick="iniciarJogo()">Jogo da Soma</button>
+            <button onclick="iniciarNumeroSecreto()">Jogo do Número Secreto</button>
+        </div>
+        <!-- Área que será manipulada pelo JS para mostrar cada aplicação -->
+        <section id="aplicacao"></section>
+        <!-- Botão Sair, estilizado e posicionado abaixo da aplicação -->
+        <button class="sair" onclick="sairAplicacao()">Sair</button>
+        <!-- Caixa de diálogo personalizada para confirmação de saída -->
+        <div id="dialogo-sair" class="dialogo-sair" style="display: none;">
+            <div class="dialogo-sair-conteudo">
+                <p>Realmente deseja sair e fechar essa aplicação?</p>
+                <button onclick="confirmarSair(true)" class="botao-dialogo-sim">SIM</button>
+                <button onclick="confirmarSair(false)" class="botao-dialogo-nao">NÃO</button>
+            </div>
+        </div>
+    </main>
+    <!-- Rodapé fixo com créditos -->
+    <footer>
+        <p>Desenvolvido por Paulinho para a disciplina de Front End</p>
+    </footer>
+    <!-- Inclusão do arquivo de scripts JS externo -->
+    <script src="script.js"></script>
+</body>
+</html>
